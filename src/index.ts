@@ -134,6 +134,7 @@ async function notifyUser(data: GradeUpdate[]) {
 }
 
 async function initBrowser() {
+  console.log("Initializing browser...");
   const browser = await launch(
     config.puppeteerLaunchArgs as PuppeteerLaunchOptions
   );
@@ -148,6 +149,7 @@ async function initBrowser() {
     }
   });
 
+  console.log("Logging in...");
   await page.goto(pages.login);
   await page.$eval(
     "input[id=Email]",
@@ -166,6 +168,7 @@ async function initBrowser() {
   await page.goto(pages.studentRecords);
   await page.waitForSelector("table");
 
+  console.log("Intializing table...");
   const table = await findTable(page);
   const gradebookTable = await extractTableData(table);
   currentGradebookTable = gradebookTable.slice();
@@ -174,6 +177,7 @@ async function initBrowser() {
     console.log("Checking for changes...");
     checkForTableChanges(page);
   }, config.checkInterval);
+  console.log("Interval set.");
 
   // Simulate a change for development purposes
   // setTimeout(async () => {
