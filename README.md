@@ -19,13 +19,13 @@ Before you can use this application, ensure you have the following:
 1. Clone this repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/darlingtongradenotifier.git
+   git clone https://github.com/shlushi/DarlingtonGradeNotifier.git
    ```
 
 2. Change to the project directory:
 
    ```bash
-   cd darlingtongradenotifier
+   cd DarlingtonGradeNotifier
    ```
 
 3. Install the required npm packages:
@@ -42,7 +42,7 @@ Before you can use this application, ensure you have the following:
    - `DAR_PASSWORD`: Your Darlington login password
    - `TELNYX_API_KEY`: Telnyx API v2 key which you can find [here](https://portal.telnyx.com/#/app/api-keys)
    - `FROM_PHONE_NUMBER`: A phone number ordered on Telnyx
-   - `TO_PHONE_NUMBER`: The phone number to recieve SMS notifications on
+   - `TO_PHONE_NUMBER`: The phone number to receive SMS notifications on
 
 ## Usage
 
